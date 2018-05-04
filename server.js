@@ -20,4 +20,4 @@ server.use(morgan('dev'));
 server.use('/api/actions', actionRouter);
 server.use('/api/projects', projectRouter);
 
-server.listen(port, () => console.log(`API Is Running Running on Port:${port}`));
+server.listen(port, () => console.log(`API Is Running, Running on Port:${port}`));
