@@ -11,11 +11,13 @@ const logger = (req, res, next) => {
     console.log(`Requested URL: ${req.url}`);
     console.log(`Request Info: ${req.body}`);
     next();
+}
 
 
 server.use(express.json());
 server.use(helmet());
 server.use(cors());
+server.use(morgan('dev'));
 server.use('/api/actions', actionRouter);
 server.use('/api/projects', projectRouter);
 
