@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../data/helpers/actionModel.js');
-
 router.get('/', (req, res) => {
 	db
 	.get()
@@ -12,7 +11,6 @@ router.get('/', (req, res) => {
 		res.status(500).json({ error });
 		});
 });
-
 router.get('/:id', (req, res) => {
 	const { id } = req.params;
 	db
@@ -47,7 +45,6 @@ router.put('/:id', (req, res) => {
 		res.status(500).json({ error });
 });
 });
-
 router.delete('/:id', (req, res) => {
 	const { id } = req.params;
 	db
@@ -59,5 +56,4 @@ router.delete('/:id', (req, res) => {
 		res.status(500).json({ error });
 });
 });
-
 module.exports = router;
