@@ -2,8 +2,8 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const morgan = require('cors');
-const actionRouter = require('./actions/actionRouter.js');
-const projectRouter = require('./projects/projectRouter.js');
+const actionRouter = require('./routers/actionRouter.js');
+const projectRouter = require('./routers/projectRouter.js');
 const server = express();
 const port = 5000;
 
