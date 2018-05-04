@@ -7,10 +7,9 @@ const projectRouter = require('./routers/projectRouter.js');
 const server = express();
 const port = 5000;
 
-const logger = (req, res, next) => {
+const logger = (req, res) => {
     console.log(`Requested URL: ${req.url}`);
     console.log(`Request Info: ${req.body}`);
-    next();
 }
 
 
